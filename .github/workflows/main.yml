@@ -35,6 +35,8 @@ jobs:
           chmod 400 /home/runner/.ssh/id_rsa
         shell: bash
 
+      - name: Add EC2 Host Key
+        run: ssh-keyscan -H -t rsa 65.0.17.97 >> ~/.ssh/known_hosts
 
       - name: Run Ansible Playbook
         run: |
