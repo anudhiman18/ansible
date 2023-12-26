@@ -3,8 +3,7 @@ name: Deploy Nginx on EC2
 on:
   workflow_dispatch:
     inputs:
-      Run it:
-        description: 'Wanna run'
+      run it:
         required: true
         
 jobs:
